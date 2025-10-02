@@ -177,19 +177,19 @@ def dataloader(dataset_name="cvc-clinicdb",
 
     return train_loader, val_loader, test_loader
 
-if __name__ == "__main__":
-    # Example: load dataloaders
-    train_loader, val_loader, test_loader = dataloader(
-        dataset_name="cvc-clinicdb",
-        dataset_dir="./datasets",
-        dataset_class=PolypDatasets,
-        img_size=256,
-        batch_size=4,
-        split_ratio=(0.7, 0.15, 0.15),
-        num_workers=2,
-        download=True
-    )
+# if __name__ == "__main__":
+#     # Example: load dataloaders
+#     train_loader, val_loader, test_loader = dataloader(
+#         dataset_name="cvc-clinicdb",
+#         dataset_dir="./datasets",
+#         dataset_class=PolypDatasets,
+#         img_size=256,
+#         batch_size=4,
+#         split_ratio=(0.7, 0.15, 0.15),
+#         num_workers=2,
+#         download=True
+#     )
 
-    print(f"Train batches: {len(train_loader)}")
-    print(f"Val batches: {len(val_loader)}")
-    print(f"Test batches: {len(test_loader)}")  
+#     print(f"Train batches: {len(train_loader)}")
+#     print(f"Val batches: {len(val_loader)}")
+#     print(f"Test batches: {len(test_loader)}")
