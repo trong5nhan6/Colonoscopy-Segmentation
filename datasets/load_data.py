@@ -6,7 +6,7 @@ from torch.utils.data import Dataset, DataLoader, random_split
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
-from dowload import download_and_extract, get_datasets
+from datasets.download import download_and_extract, get_datasets
 
 # -----------------------------
 # Augmentation
