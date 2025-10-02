@@ -65,8 +65,8 @@ class PolypDatasets(Dataset):
 
         # --- Apply augmentation ---
         augmented = self.transform(image=image, mask=mask)
-        image = augmented["image"]              # (3, H, W)
-        mask = augmented["mask"]                # (H, W)
+        image = augmented["image"].float()              # (3, H, W)
+        mask = augmented["mask"].float()                # (H, W)
 
         # --- Ép mask thành (1, H, W) ---
         mask = mask.unsqueeze(0)                # thêm channel = 1
